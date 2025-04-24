@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Investment Plans | The Trading Nomad</title>
+  <link rel="stylesheet" href="css/plans.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="particles" id="particles-js"></div>
+  
+  <!-- Navigation -->
+  <header class="glass-nav">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Trading Nomad Logo" class="logo-img">
+      <span class="logo-text">The Trading Nomad</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plans.html" class="active">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <!-- <li><a href="#" class="nav-cta">Client Login</a></li> -->
+      </ul>
+      <!-- <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div> -->
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <img src="images/logo.png" alt="The Trading Nomad Logo">
+        <span>The Trading Nomad</span>
+      </div>
+      <div class="close-menu-btn">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="plans.html" class="active"><i class="fas fa-chart-line"></i> Plans</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#" class="nav-cta"><i class="fas fa-user"></i> Client Login</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="plans-hero">
+      <div class="hero-content">
+        <h1 class="gradient-text">Premium <span>Investment</span> Solutions</h1>
+        <p class="hero-subtitle">Maximize your returns with our expertly crafted investment plans</p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="openPlanAModal()">
+            <i class="fas fa-chart-pie"></i> View Top Plan
+          </button>
+          <a href="#calculator" class="btn-secondary">
+            <i class="fas fa-calculator"></i> Calculate Returns
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <span></span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/investment-hero.png" alt="Investment growth chart">
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="11">0</h3>
+          <p>Active Investors</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-rupee-sign"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="20">0</h3>
+          <p>Lakhs+ Invested</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-percentage"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="95">0</h3>
+          <p>Success Rate</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Grid -->
+    <section class="plans-grid-section">
+      <div class="section-header">
+        <h2>Our <span>Investment</span> Plans</h2>
+        <p>Choose the perfect plan for your financial goals</p>
+      </div>
+      
+      <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card" data-plan="wealth">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Wealth Kickstart</h3>
+            <div class="plan-tag">Most Popular</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 2% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> 5% Capital Return Monthly</li>
+              <li><i class="fas fa-check-circle"></i> 20 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> ₹1,00,000 Minimum</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,40,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanAModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card" data-plan="premium">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h3>Premium Growth</h3>
+            <div class="plan-tag elite">High ROI</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 3% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> Full Capital Return</li>
+              <li><i class="fas fa-check-circle"></i> 18 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> 12 Month Lock-in</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,54,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanBModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card" data-plan="vip">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3>VIP Accelerator</h3>
+            <div class="plan-tag vip">Exclusive</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 4% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> Quarterly Bonuses</li>
+              <li><i class="fas fa-check-circle"></i> 24 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> Dedicated Manager</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,92,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanCModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Calculator -->
+    <section class="calculator-section" id="calculator">
+      <div class="section-header">
+        <h2>Investment <span>Calculator</span></h2>
+        <p>Estimate your potential returns with our interactive calculator</p>
+      </div>
+      
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="input-group">
+            <label for="investmentAmount">Investment Amount (₹)</label>
+            <input type="range" id="investmentAmount" min="100000" max="5000000" step="50000" value="100000">
+            <div class="amount-display">
+              <span id="amountDisplay">₹1,00,000</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="planSelect">Select Plan</label>
+            <select id="planSelect">
+              <option value="planA">Wealth Kickstart</option>
+              <option value="planB">Premium Growth</option>
+              <option value="planC">VIP Accelerator</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="investmentDuration">Custom Duration (Months)</label>
+            <input type="range" id="investmentDuration" min="6" max="36" step="1" value="18">
+            <div class="duration-display">
+              <span id="durationDisplay">18 Months</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="calculator-results">
+          <h3>Projected Returns</h3>
+          <div class="results-grid" id="calculatorResults">
+            <!-- JS will populate this -->
+          </div>
+          <button class="btn-primary invest-now-btn" onclick="openSelectedPlanModal()">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+      <div class="section-header">
+        <h2>Plan <span>Comparison</span></h2>
+        <p>Detailed breakdown of all plan features</p>
+      </div>
+      
+      <div class="comparison-table-container">
+        <div class="table-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Wealth Kickstart</th>
+                <th>Premium Growth</th>
+                <th>VIP Accelerator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Return</td>
+                <td>2% + 5% Capital</td>
+                <td>3%</td>
+                <td>4% + Bonuses</td>
+              </tr>
+              <tr>
+                <td>Term Length</td>
+                <td>20 Months</td>
+                <td>18 Months</td>
+                <td>24 Months</td>
+              </tr>
+              <tr>
+                <td>Minimum Investment</td>
+                <td>₹1,00,000</td>
+                <td>₹1,00,000</td>
+                <td>₹2,50,000</td>
+              </tr>
+              <tr>
+                <td>Capital Return</td>
+                <td>Monthly</td>
+                <td>End of Term</td>
+                <td>End of Term</td>
+              </tr>
+              <tr>
+                <td>Lock-in Period</td>
+                <td>None</td>
+                <td>12 Months</td>
+                <td>18 Months</td>
+              </tr>
+              <tr>
+                <td>Total Returns*</td>
+                <td>₹1,40,000</td>
+                <td>₹1,54,000</td>
+                <td>₹1,92,000</td>
+              </tr>
+              <tr>
+                <td>Support</td>
+                <td>Standard</td>
+                <td>Priority</td>
+                <td>Dedicated Manager</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="disclaimer">*Calculated on minimum investment amount. Actual returns may vary based on market conditions.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2>Investor <span>Success</span> Stories</h2>
+        <p>Hear from our satisfied investors</p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">I've been investing with The Trading Nomad for 2 years now. The Wealth Kickstart plan helped me generate consistent monthly income while preserving my capital. Highly recommended!</p>
+            <div class="testimonial-author">
+              <!-- <img src="images/client1.jpg" alt="Rajesh Kumar"> -->
+              <div class="author-info">
+                <h4>Rajesh Kumar</h4>
+                <p>Mumbai, Investor since 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">The VIP Accelerator plan exceeded my expectations. My dedicated manager helped me optimize my investment strategy, resulting in 22% higher returns than projected!</p>
+            <div class="testimonial-author">
+              <!-- <img src="images/client2.jpg" alt="Priya Sharma"> -->
+              <div class="author-info">
+                <h4>Priya Sharma</h4>
+                <p>Delhi, VIP Investor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risk Disclosure Section -->
+    <section class="risk-disclosure">
+      <div class="section-header">
+        <h2>Investment <span>Risk Disclosure</span></h2>
+        <p>Important information about potential risks</p>
+      </div>
+      
+      <div class="disclosure-content glass-card">
+        <div class="disclosure-card">
+          <div class="disclosure-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>General Investment Risks</h3>
+          <ul>
+            <li><i class="fas fa-circle"></i> All investments carry risk and may result in loss of capital</li>
+            <li><i class="fas fa-circle"></i> Past performance is not indicative of future results</li>
+            <li><i class="fas fa-circle"></i> Projected returns are estimates, not guarantees</li>
+            <li><i class="fas fa-circle"></i> Market conditions may affect actual returns</li>
+          </ul>
+        </div>
+        
+        <div class="disclosure-card">
+          <div class="disclosure-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Plan-Specific Risks</h3>
+          <ul>
+            <li><i class="fas fa-circle"></i> Early withdrawals may be subject to penalties</li>
+            <li><i class="fas fa-circle"></i> Lock-in periods restrict access to funds</li>
+            <li><i class="fas fa-circle"></i> Capital return schedules vary by plan</li>
+            <li><i class="fas fa-circle"></i> Higher returns typically involve higher risk</li>
+          </ul>
+        </div>
+        
+        <div class="disclosure-card">
+          <div class="disclosure-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Important Considerations</h3>
+          <ul>
+            <li><i class="fas fa-circle"></i> Investments are not bank deposits and are not insured</li>
+            <li><i class="fas fa-circle"></i> Diversification is recommended to mitigate risk</li>
+            <li><i class="fas fa-circle"></i> Consult a financial advisor before investing</li>
+            <li><i class="fas fa-circle"></i> Only invest funds you can afford to lose</li>
+          </ul>
+        </div>
+        
+        <div class="full-disclaimer">
+          <p><strong>Full Disclaimer:</strong> The Trading Nomad provides investment management services but does not guarantee returns. All investment decisions are at the sole discretion of the investor. We recommend reviewing all plan documents carefully and ensuring you fully understand the risks before committing funds. Investments may be subject to market volatility and other economic factors beyond our control.</p>
+        </div>
+      </div>
+      <div class="testimonials-cta">
+        <button class="btn-primary" onclick="openPlanBModal()">
+          <i class="fas fa-chart-line"></i> Start Investing Today
+        </button>
+      </div>
+    </section>
+    
+  </main>
+
+  <!-- Modals -->
+  <!-- Plan A Modal -->
+  <div id="planAModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planAModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-rocket"></i> Wealth Kickstart Plan</h2>
+        <div class="modal-badge">Most Popular</div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-highlight">
+          <div class="highlight-card">
+            <i class="fas fa-rupee-sign"></i>
+            <h4>Minimum Investment</h4>
+            <p>₹1,00,000</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Term Length</h4>
+            <p>20 Months</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Total Returns</h4>
+            <p>₹1,40,000</p>
+          </div>
+        </div>
+        
+        <h3>Plan Details</h3>
+        <div class="plan-description">
+          <p>The Wealth Kickstart plan is designed for investors who want steady monthly income while systematically recovering their capital. You'll receive ₹7,000 every month (₹2,000 interest + ₹5,000 capital return) for 20 months.</p>
+        </div>
+        
+        <h3>How It Works</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Monthly Returns</h4>
+              <p>Receive ₹7,000 every month (₹2,000 interest + ₹5,000 capital return)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Consistent Growth</h4>
+              <p>Steady monthly payments for 20 consecutive months</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Full Recovery</h4>
+              <p>Your entire capital is returned systematically over the term</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-cta">
+          <button class="invest-now">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+          <button class="consult-expert">
+            <i class="fas fa-headset"></i> Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plan B Modal -->
+  <div id="planBModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planBModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-gem"></i> Premium Growth Plan</h2>
+        <div class="modal-badge elite">High Growth</div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-highlight">
+          <div class="highlight-card">
+            <i class="fas fa-rupee-sign"></i>
+            <h4>Minimum Investment</h4>
+            <p>₹1,00,000</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Term Length</h4>
+            <p>18 Months</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Total Returns</h4>
+            <p>₹1,54,000</p>
+          </div>
+        </div>
+
+        <h3>Plan Details</h3>
+        <div class="plan-description">
+          <p>The Premium Growth plan offers high monthly interest returns of ₹3,000 for 18 months on a ₹1,00,000 investment. Your capital is fully returned at the end of the term.</p>
+        </div>
+
+        <h3>How It Works</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Monthly Interest</h4>
+              <p>Earn ₹3,000 every month (3% interest on ₹1,00,000)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Capital Lock-in</h4>
+              <p>Capital is locked for 12 months and returned fully after 18 months</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Full Capital Return</h4>
+              <p>₹1,00,000 is returned to you at the end of the plan term</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-cta">
+          <button class="invest-now">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+          <button class="consult-expert">
+            <i class="fas fa-headset"></i> Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plan C Modal -->
+  <div id="planCModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planCModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-crown"></i> VIP Accelerator Plan</h2>
+        <div class="modal-badge vip">Exclusive</div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-highlight">
+          <div class="highlight-card">
+            <i class="fas fa-rupee-sign"></i>
+            <h4>Minimum Investment</h4>
+            <p>₹2,50,000</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Term Length</h4>
+            <p>24 Months</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Total Returns</h4>
+            <p>₹1,92,000</p>
+          </div>
+        </div>
+
+        <h3>Plan Details</h3>
+        <div class="plan-description">
+          <p>The VIP Accelerator plan is built for elite investors seeking maximum growth. Enjoy 4% monthly returns, quarterly bonuses, and a dedicated relationship manager to optimize your investment journey.</p>
+        </div>
+
+        <h3>How It Works</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Monthly Returns</h4>
+              <p>Earn ₹10,000 monthly on a ₹2,50,000 investment (4% return)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Quarterly Bonuses</h4>
+              <p>Extra bonuses every 3 months based on market performance</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Capital Return</h4>
+              <p>Capital is returned in full at the end of the 24-month term</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-cta">
+          <button class="invest-now">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+          <button class="consult-expert">
+            <i class="fas fa-headset"></i> Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Investment Modal -->
+  <div id="investmentModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('investmentModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-file-signature"></i> Investment Application</h2>
+      </div>
+      <div class="modal-body">
+        <form id="investmentForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="selectedPlan">Selected Plan</label>
+            <select id="selectedPlan" required>
+              <option value="">Select a plan</option>
+              <option value="Wealth Kickstart">Wealth Kickstart</option>
+              <option value="Premium Growth">Premium Growth</option>
+              <option value="VIP Accelerator">VIP Accelerator</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="investmentAmount">Investment Amount (₹)</label>
+            <input type="number" id="investmentAmountModal" min="100000" required>
+          </div>
+          
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="images/logo.png" alt="The Trading Nomad Logo">
+          <span>The Trading Nomad</span>
+        </div>
+        <p class="footer-description">Premium investment solutions for discerning investors. Maximize your returns with our expertly managed plans.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Invest</h4>
+          <a href="#">Plans</a>
+          <a href="#">Performance</a>
+          <a href="#">Calculator</a>
+          <a href="#">FAQ</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Team</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Compliance</a>
+          <a href="#">Disclosures</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Contact</h4>
+          <a href="#">Support</a>
+          <a href="#">Advisors</a>
+          <a href="#">Locations</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Trading Nomad. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Risk Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/plans.js"></script>
+</body>
+</html>
